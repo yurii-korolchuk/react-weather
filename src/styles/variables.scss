@@ -1,0 +1,36 @@
+$main-color: #4793ff;
+$weak-color: #939cb0;
+
+$body-background-dark: #000000;
+$body-background-light: #ffffff;
+
+$card-background-dark: #4f4f4f;
+$card-background-light: #ffffff;
+
+$day-background-dark: #2e3035;
+$day-background-light: rgba(71, 147, 255, 0.2);
+
+$text-color-dark: #ffffff;
+$text-color-light: 000000;
+
+:root {
+	// body
+	--body-background-dark: #{$body-background-dark};
+	--body-background-light: #{$body-background-light};
+	--body-background-default: var(#{--body-background-light});
+
+	// cards
+	--card-background-dark: #{$card-background-dark};
+	--card-background-light: #{$card-background-light};
+	--card-background-default: var(#{--card-background-light});
+
+	// day
+	--day-background-dark: #{$day-background-dark};
+	--day-background-light: #{$day-background-light};
+	--day-background-default: var(#{--day-background-light});
+
+	// text
+	--text-color-dark: #{$text-color-dark};
+	--text-color-light: #{$text-color-light};
+	--text-color-default: var(#{--text-color-light});
+}

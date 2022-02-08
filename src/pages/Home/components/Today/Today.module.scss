@@ -1,0 +1,104 @@
+@import '../../../../styles/variables.scss';
+
+.today {
+	min-width: 400px;
+	padding: 20px;
+	color: var(#{--text-color-default});
+}
+
+.top_block {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	flex-direction: row;
+	margin-bottom: 30px;
+}
+
+.wrapper {
+	display: flex;
+	flex-direction: column;
+}
+
+.img {
+	& img {
+		width: 119px;
+		height: 119px;
+	}
+}
+
+.bottom_block {
+	color: $weak-color;
+	font-weight: 400;
+	font-size: 25px;
+}
+
+.temperature {
+	font-weight: 500;
+	font-size: 96px;
+	color: $main-color;
+	line-height: 1;
+}
+
+.title {
+	font-weight: 400;
+	font-size: 40px;
+}
+
+.time {
+	margin-bottom: 15px;
+}
+
+@media (max-width: 992px) {
+	.top_block {
+		align-items: center;
+		justify-content: flex-start;
+	}
+
+	.img {
+		margin-left: 20px;
+	}
+}
+
+@media (max-width: 576px) {
+	.today {
+		max-width: unset;
+		min-width: unset;
+	}
+
+	.temperature {
+		font-size: 72px;
+	}
+
+	.title {
+		font-size: 32px;
+	}
+
+	.bottom_block {
+		font-size: 20px;
+	}
+}
+
+@media (max-width: 414px) {
+	.top_block {
+		justify-content: flex-start;
+	}
+
+	.img {
+		& img {
+			width: 80px;
+			height: 80px;
+		}
+	}
+
+	.title {
+		font-size: 24px;
+	}
+
+	.temperature {
+		font-size: 48px;
+	}
+
+	.bottom_block {
+		font-size: 16px;
+	}
+}

@@ -1,0 +1,141 @@
+@import '../../../../styles/variables.scss';
+
+.tabs {
+	display: flex;
+	justify-content: space-between;
+	width: 100%;
+	margin-bottom: 10px;
+}
+
+.tab {
+	border: none;
+	background: var(#{--card-background-default});
+	padding: 8px 20px;
+	font-size: 14px;
+	color: var(#{--text-color-default});
+	box-shadow: 2px 5px 25px -3px #b4b4b440;
+	border-radius: 5px;
+	cursor: pointer;
+	font-weight: 400;
+	font-size: 18px;
+	transition: 0.3s transform;
+
+	&:active,
+	&:hover {
+		background-color: $main-color;
+		color: #ffffff;
+	}
+
+	&:hover {
+		transform: scale(1.1);
+	}
+}
+
+.tab_active {
+	background-color: $main-color;
+	color: #ffffff;
+}
+
+.tabs_wrapper:first-of-type .tab {
+	margin-right: 15px;
+
+	&:last-of-type {
+		margin-right: 0;
+	}
+}
+
+.days_container {
+	display: grid;
+	justify-items: center;
+	row-gap: 20px;
+	grid-template-columns: repeat(7, 1fr);
+	box-shadow: 2px 5px 25px -3px rgba(180, 180, 180, 0.25);
+	border-radius: 0px 0px 20px 20px;
+	padding: 20px 20px 40px 20px;
+}
+
+.day {
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-start;
+	align-items: flex-start;
+	width: 150px;
+	background: var(#{--day-background-default});
+	border-radius: 10px;
+	box-shadow: 2px 5px 25px -3px rgba(180, 180, 180, 0.25);
+	cursor: pointer;
+	transition: 0.3s all;
+
+	&:hover {
+		transform: scale(1.1);
+	}
+
+	&_inner {
+		padding: 11px 0 11px 11px;
+	}
+
+	&_title,
+	&_temperature_day {
+		color: var(#{--text-color-default});
+		font-size: 18px;
+		font-weight: 500;
+		margin-bottom: 7px;
+	}
+
+	&_temperature_day {
+		margin-bottom: 0;
+	}
+
+	&_date,
+	&_temperature_night,
+	&_weather {
+		color: $weak-color;
+		font-weight: 400;
+		font-size: 14px;
+		margin-bottom: 12px;
+	}
+
+	&_temperature_night {
+		margin-bottom: 6px;
+	}
+
+	&_weather {
+		margin-bottom: 0;
+	}
+
+	&_img {
+		& img {
+			width: 70px;
+			height: 70px;
+		}
+	}
+}
+
+@media (max-width: 1250px) {
+	.days_container {
+		grid-template-columns: repeat(4, 1fr);
+	}
+}
+
+@media (max-width: 992px) {
+	.days_container {
+		grid-template-columns: repeat(3, 1fr);
+	}
+}
+
+@media (max-width: 576px) {
+	.days_container {
+		grid-template-columns: repeat(2, 1fr);
+	}
+}
+
+@media (max-width: 414px) {
+	.days_container {
+		grid-template-columns: 1fr;
+	}
+
+	.day {
+		width: 100%;
+		max-width: 200px;
+	}
+}

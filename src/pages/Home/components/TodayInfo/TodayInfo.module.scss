@@ -1,0 +1,31 @@
+.today_info {
+	padding: 40px 30px;
+	max-width: 750px;
+}
+
+.today_info_image {
+	position: absolute;
+	right: 0;
+	top: 0;
+	z-index: -2;
+	max-width: 100%;
+}
+
+@media (max-width: 1280px) {
+	.today_info {
+		width: auto;
+		max-width: 500px;
+	}
+}
+
+@media (max-width: 576px) {
+	.today_info_image {
+		display: none;
+	}
+}
+
+@media (max-width: 414px) {
+	.today_info {
+		padding: 20px;
+	}
+}
